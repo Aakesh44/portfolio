@@ -74,9 +74,9 @@ const ProjectsSection = () => {
         <section id="Projects" className="relative w-full min-h-fit pt-20 bg-cyan-5000">
             
              {/* Sticky Header */}
-            <div 
+            <div
                 className="sticky  top-20 z-10 w-full h-28 flex items-center justify-center bg-yellow-3000"
-                style={{marginBottom:`${projectCardHeight}px`}}
+                style={{marginBottom:`${projectCardHeight+28}px`}}
             >
                 <div className="absolute top-2 md:top-1/2 md:-translate-y-1/2 left-5 lg:left-40 xl:left-1/4">
                     <TiltingLable name="Projects"/>
@@ -101,7 +101,7 @@ const ProjectsSection = () => {
                         <figure 
                             key={i} 
                             ref={projectCardRef}
-                            className={clsx(`sticky top-48 w-4/5 lg:w-3/5 xl:w-[45%] h-fit md:h-96 xl:h-[420px] flex flex-col items-end justify-start bg-red-6000`)}
+                            className={clsx(`sticky top-56 w-4/5 lg:w-3/5 xl:w-[45%] h-fit md:h-96 xl:h-[420px] flex flex-col items-end justify-start bg-red-6000`)}
                             style={{zIndex: 10+i+1}}
                         >
 

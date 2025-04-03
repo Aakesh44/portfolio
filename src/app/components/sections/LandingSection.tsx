@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import React from 'react';
 import ash from '../../../../public/assets/Image/ash.png';
@@ -7,29 +9,65 @@ import vector_3 from '../../../../public/assets/Image/Vector 3.png';
 import Marquee from 'react-fast-marquee';
 import TiltingLable from '../ui/TiltingLable';
 
+import {motion} from 'framer-motion';
+
 const LandingSection = () => {
+
+
     return (
-        <section id='Aakesh' className='relative w-full h-[100dvh] bg-[#ededed] grid place-items-center transition-all duration-300 ease-linear'>
+        <section id='Aakesh' className='relative w-full h-[100dvh] bg-[#ededed] grid place-items-center transition-all duration-300 ease-linear overflow-hidden'>
 
             <section className='h-3/4 lg:h-fit w-[90%] sm:w-5/6 md:w-3/5 lg:w-5/6 xl:w-3/5 2xl:w-4/6 xl:pb-20 bg-white. grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 transition-[width] duration-300 ease-linear bg-yellow-3000'>
 
                 <aside className='order-2 lg:order-1 relative col-span-1 row-span-2 lg:col-span-2 lg:row-span-1 h-full flex flex-col justify-center items-start gap-2 bg-lime-4000'>
 
-                    <p className='font-squarepeg font-normal text-4xl md:text-5xl'>Hi, I&apos;m Aakesh!</p>
+                    <motion.h2
+                        initial={{opacity: 0, y: 100, scale: 0.8 }}
+                        animate={{opacity: 1, y: 0, scale: 1 }}
+                        transition={{duration: 0.5, delay: 0.5 }}
+                        className='font-squarepeg font-normal text-4xl md:text-5xl'>
+                            Hi, I&apos;m Aakesh!
+                    </motion.h2>
 
-                    <h1 className='font-bricolage font-bold text-5xl md:text-[54px] md:leading-[54px]'>A Curious <br /> Solution Crafter</h1>
+                    <motion.h1 
+                        initial={{ opacity: 0, y: 100, scale: 0.8 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className='font-bricolage font-bold text-5xl md:text-[54px] md:leading-[54px]'
+                    >
+                            A Curious <br /> Solution Crafter
+                    </motion.h1>
 
-                    <h2 className='min-h-fit h-20 3xl:h-28 font-satoshi font-normal text-lg md:text-xl'>I believe in constantly evolving, turning every challenge into a canvas and every experience into a masterpiece.</h2>
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 100, scale: 0.8 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.7 }}
+                        className='min-h-fit h-20 3xl:h-28 font-satoshi font-normal text-lg md:text-xl'
+                    >
+                        I believe in constantly evolving, turning every challenge into a canvas and every experience into a masterpiece.
+                    </motion.h2>
 
-                    <TiltingLable name='Frontend Developer' />
+                    <motion.div
+                        initial= {{opacity: 0, scale: 0.5 }}
+                        animate={{opacity: 1, scale: 1 }}
+                        transition={{duration: 0.5, delay: 1.2 }}
+                    >
+                        <TiltingLable name='Frontend Developer' />
+                    </motion.div>
 
                 </aside>
 
                 <aside className='order-1 lg:order-2 col-span-1 row-span-1 lg:col-span-1 lg:row-span-1 h-full bg-pink-4000 flex items-center justify-center lg:justify-end'>
                         
-                    <div className='relative h-5/6 lg:h-auto lg:w-3/4 3xl:w-2/3 aspect-square rounded-full bg-white' style={{boxShadow: '2px 2px 0px #000'}}>
+                    <motion.div 
+                        initial={{ opacity: 0, y: 100, scale: 0.8 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        className='relative h-5/6 lg:h-auto lg:w-3/4 3xl:w-2/3 aspect-square rounded-full bg-white'
+                        style={{boxShadow: '2px 2px 0px #000'}}
+                    >
 
-                        <Image src={ash} alt='profile' fill objectFit='cover' className='w-full rounded-full bg-center bg-contain hover:rotate-2'/>
+                        <Image src={ash} alt='profile' fill className='w-full rounded-full bg-center bg-contain object-cover hover:rotate-2'/>
 
                         <Image src={vector_1} alt='vector 1' className='absolute w-28 aspect-square -top-10 -left-10 animate-zoom.'/>
 
@@ -37,13 +75,17 @@ const LandingSection = () => {
 
                         <Image src={vector_3} alt='vector 3' className='absolute h-10 w-32 lg:h-12 lg:w-28 scale-75 lg:scale-100 aspect-square bottom-1/4 -right-[40%] lg:-right-1/4 lg:animate-zoom'/>
 
-                    </div>
+                    </motion.div>
 
                 </aside>
             
             </section>
 
-            <div className='absolute bottom-5 lg:bottom-20 left-0 w-full h-fit py-5 bg-pink-4000 font-bricolage font-medium text-xl text-[#22222]'>
+            <motion.div 
+                initial= {{ opacity: 0 }}
+                animate={{ opacity: 1, translateX: 0 }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className='absolute bottom-5 lg:bottom-20 left-0 w-full h-fit py-5 bg-pink-4000 font-bricolage font-medium text-xl text-[#22222] overflow-hidden'>
 
                 <Marquee speed={50} gradient={true} gradientWidth={20}>
                     
@@ -62,7 +104,7 @@ const LandingSection = () => {
 
                 </Marquee>
 
-            </div>
+            </motion.div>
 
             {/* Flipped Curve - Always Touching Navbar */}
             <div className="absolute -bottom-full left-0 hidden. h-full w-full overflow-hidden leading-none">

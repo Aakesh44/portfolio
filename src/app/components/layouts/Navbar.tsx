@@ -23,7 +23,8 @@ const Navbar = () => {
                         smooth={true}
                         offset={0} // Adjust based on your navbar height
                         duration={500} 
-                        className='w-fit text-start font-squarepeg text-2xl 3xl:text-3xl font-medium text-black hover:text-[#f46572] transition-colors duration-500 cursor-pointer'>
+                        className='w-fit text-start font-squarepeg text-2xl md:text-3xl 3xl:text-3xl font-medium text-black hover:text-[#f46572] transition-colors duration-500 cursor-pointer'
+                    >
                             Aakesh.
                     </ScrollLink>
 

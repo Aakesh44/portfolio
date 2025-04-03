@@ -79,9 +79,9 @@ const Footer = () => {
                     </button>
 
                     <div className='flex items-center gap-4'>
-                        <a href="" className='size-10 grid place-items-center bg-white rounded-lg border border-white shadow-none hover:shadow-[2px_3px_0px_black] hover:scale-110 duration-[300ms] transition-all'><CiLinkedin  className='size-6'/></a>
-                        <a href="" className='size-10 grid place-items-center bg-white rounded-lg border border-white shadow-none hover:shadow-[2px_3px_0px_black] hover:scale-110 duration-[300ms] transition-all'><IoMailOutline className='size-5' /></a>
-                        <a href="" className='size-10 grid place-items-center bg-white rounded-lg border border-white shadow-none hover:shadow-[2px_3px_0px_black] hover:scale-110 duration-[300ms] transition-all'><BsInstagram className='size-5'/></a>
+                        <a href="" className='size-10 grid place-items-center bg-white hover:text-[#0077B5] rounded-lg border border-white shadow-none hover:shadow-[2px_3px_0px_#0077B5] hover:scale-110 duration-[300ms] transition-all'><CiLinkedin  className='size-6'/></a>
+                        <a href="" className='size-10 grid place-items-center bg-white hover:text-[#D14836] rounded-lg border border-white shadow-none hover:shadow-[2px_3px_0px_#D14836] hover:scale-110 duration-[300ms] transition-all'><IoMailOutline className='size-5' /></a>
+                        <a href="" className='size-10 grid place-items-center bg-white hover:text-[#E4405F] rounded-lg border border-white shadow-none hover:shadow-[2px_3px_0px_#E4405F] hover:scale-110 duration-[300ms] transition-all'><BsInstagram className='size-5'/></a>
                     </div>
                 </div>
 

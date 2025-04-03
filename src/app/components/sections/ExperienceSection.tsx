@@ -1,7 +1,9 @@
+"use client";
 import React from 'react';
 import TiltingLable from '../ui/TiltingLable';
 import thinsilLogo from '../../../../public/assets/Icon/thinsilLogo.jpg'
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const experiences = [
     {
@@ -49,7 +51,12 @@ const ExperienceSection = () => {
 
                 {experiences?.map(({company_name, job_title, duration, descriptions}, i) => 
 
-                    <div key={i} className='w-full md:w-3/4 lg:w-1/2 h-fit p-5 bg-[#f4f4f4] flex items-start justify-start gap-5 rounded-2xl drop-shadow-lg overflow-hidden'>
+                    <motion.div 
+                        key={i} 
+                        initial={{y: 100, opacity: 0}}
+                        whileInView={{y: 0, opacity: 1}}
+                        transition={{duration: 0.5, delay: i * 0.1}}
+                        className='w-full md:w-3/4 lg:w-1/2 h-fit p-5 bg-[#f4f4f4] flex items-start justify-start gap-5 rounded-2xl drop-shadow-lg overflow-hidden'>
 
                      {/* <div key={i} className='w-4/5 lg:w-3/5 xl:w-[45%] h-fit p-5 bg-[#f4f4f4] flex items-start justify-start gap-5 rounded-2xl drop-shadow-lg overflow-hidden'> */}
 
@@ -82,7 +89,7 @@ const ExperienceSection = () => {
 
                         </aside>
 
-                    </div>
+                    </motion.div>
                 )}
 
 

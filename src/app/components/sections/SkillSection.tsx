@@ -84,7 +84,7 @@ const SkillSection = () => {
 
             <div className='w-4/5 lg:w-3/5 xl:w-1/2 p-1 h-fit grid place-items-center bg-pink-5000 overflow-hidden.'>
 
-                <div ref={orbitRef} className={`w-full aspect-[2/1] grid place-items-center bg-emerald-4000 ${ !orbitInView ? 'overflow-hidden' : (isOverflowVisible && orbitInView) ? 'overflow-visible': 'overflow-hidden'}`}>
+                <div ref={orbitRef} className={`w-full aspect-[2/1] grid place-items-center bg-emerald-4000 ${ (isOverflowVisible && orbitInView) ? 'overflow-visible': 'overflow-hidden'}`}>
 
                     <motion.div 
                         initial={{ rotate: -180 }}
