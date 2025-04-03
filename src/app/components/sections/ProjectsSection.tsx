@@ -89,7 +89,7 @@ const ProjectsSection = () => {
 
             {/* Project Cards - Stacking Effect */}
             <div 
-                className="w-full mb-20 h-fit flex flex-col items-center gap-10 mt-5"
+                className="w-full mb-20 h-fit flex flex-col items-center gap-16 mt-5"
                 style={{marginTop: `-${projectCardHeight}px` }}
             >
 
